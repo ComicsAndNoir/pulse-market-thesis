@@ -5,6 +5,7 @@ import { WeightPanel } from './components/WeightPanel';
 import { RankingView } from './components/RankingView';
 import { ScoreMatrix } from './components/ScoreMatrix';
 import { WhatWouldHaveToBeTrue } from './components/WhatWouldHaveToBeTrue';
+import { UpsellTargets } from './components/UpsellTargets';
 import { KillList } from './components/KillList';
 import { useThesisState } from './state/useThesisState';
 import { brandTokens } from './theme/theme';
@@ -64,6 +65,7 @@ export default function App() {
           {/* Right: the defense */}
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2.5 }}>
             {selected && <WhatWouldHaveToBeTrue selected={selected} />}
+            {selected && <UpsellTargets selected={selected} />}
             <KillList onSelect={setSelectedId} />
           </Box>
         </Box>

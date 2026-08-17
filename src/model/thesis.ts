@@ -39,6 +39,12 @@ export interface RoiSkeleton {
   math: string;
 }
 
+export interface UpsellTarget {
+  name: string;
+  /** Why this existing Napster account is a plausible Pulse expansion. */
+  rationale: string;
+}
+
 export interface Segment {
   id: string;
   name: string;
@@ -54,6 +60,8 @@ export interface Segment {
   whatWouldHaveToBeTrue?: string[];
   /** For the winner / top candidates: the first-principles ROI sketch. */
   roi?: RoiSkeleton;
+  /** Existing Napster accounts that could plausibly be upsold into this segment. */
+  upsellTargets?: UpsellTarget[];
 }
 
 export interface ThesisModel {
@@ -177,6 +185,17 @@ export const SEGMENTS: Segment[] = [
       buyer: 'Head of Retention / Customer Experience',
       math: 'A 1-point retention lift on a $50M book is ~$500K/yr. A pilot that informs even one save motion pays for itself many times over.',
     },
+    upsellTargets: [
+      {
+        name: 'Sports Clubs & Event Operators',
+        rationale:
+          'Onboarding/offboarding interviews for every event staff member, plus potential follow-up with attendees.',
+      },
+      {
+        name: 'Existing Retail Clients',
+        rationale: 'Onboarding/offboarding interviews at retailers with high staff churn.',
+      },
+    ],
   },
   {
     id: 'research',
@@ -254,6 +273,18 @@ export const SEGMENTS: Segment[] = [
         rationale: 'Strong expansion across every site and region once proven.',
       },
     },
+    upsellTargets: [
+      {
+        name: 'Cooper Parry',
+        rationale:
+          'Already a Napster client for leadership development — a natural expansion into Pulse for better conversations across the organization.',
+      },
+      {
+        name: 'Imperial College London',
+        rationale:
+          'Student outreach to gather feedback and identify gaps in understanding of course material.',
+      },
+    ],
   },
   {
     id: 'compliance',
