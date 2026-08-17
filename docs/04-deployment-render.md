@@ -53,17 +53,13 @@ feedback → edit `src/model/thesis.ts` → push → live in a minute or two.
   restores the weighting.
 - Confirm the footer disclaimer is present and the page is `noindex` (view source →
   `<meta name="robots" content="noindex, nofollow">`).
-- If Google Analytics is wired up (see below), open the live URL and check GA
-  Realtime for a page_view — `npm run dev` and `npm run preview` never fire it,
-  so this is the first point it can be verified.
+- Check GA Realtime for a page_view — this fires on every load, including
+  `npm run dev`, so it's easy to verify locally too.
 
 ## Google Analytics
 
-`src/lib/analytics.ts` loads GA4 (gtag.js) and fires a page_view plus click/slider
-events (`adjust_weight`, `reset_weights`, `select_segment`) — but only on a
-production build running on a real host. It is a deliberate no-op on
-`npm run dev` and a local `npm run preview`, so nothing is sent while debugging.
-
-`GA_MEASUREMENT_ID` in `src/lib/analytics.ts` is set to the real GA4 property
-(`G-NEXQ3KXMY3`). No Render env var needed; the ID isn't a secret (it's visible
-in the shipped JS either way).
+GA4 (gtag.js) is Google's standard snippet, hardcoded into `index.html`'s
+`<head>` with Measurement ID `G-NEXQ3KXMY3` — it tracks page views on every
+load, localhost included. `src/lib/analytics.ts` adds the click/slider events
+(`adjust_weight`, `reset_weights`, `select_segment`) on top of that, via the
+same `gtag()` the head script sets up.

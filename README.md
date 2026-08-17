@@ -51,9 +51,9 @@ stands in for it). See the comment block at the top of `theme.ts` for the sourci
 
 ## Analytics
 
-`src/lib/analytics.ts` wires up GA4 page views and interaction events (slider
-changes, resets, segment selection), but only on a production build running on a
-real host — `npm run dev` and a local `npm run preview` never send anything.
+GA4 (gtag.js) is loaded directly in `index.html`'s `<head>` — page views track on
+every load, including `npm run dev`. `src/lib/analytics.ts` adds interaction
+events on top of that (slider changes, resets, segment selection).
 
 ---
 
