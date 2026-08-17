@@ -54,8 +54,6 @@ stands in for it). See the comment block at the top of `theme.ts` for the sourci
 `src/lib/analytics.ts` wires up GA4 page views and interaction events (slider
 changes, resets, segment selection), but only on a production build running on a
 real host — `npm run dev` and a local `npm run preview` never send anything.
-Before deploying for real, swap the placeholder `GA_MEASUREMENT_ID` in that file
-for the real GA4 Measurement ID.
 
 ---
 

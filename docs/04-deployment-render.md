@@ -64,7 +64,6 @@ events (`adjust_weight`, `reset_weights`, `select_segment`) — but only on a
 production build running on a real host. It is a deliberate no-op on
 `npm run dev` and a local `npm run preview`, so nothing is sent while debugging.
 
-**Before deploying for real:** swap the placeholder `GA_MEASUREMENT_ID` (`G-XXXXXXXXXX`)
-in `src/lib/analytics.ts` for the real GA4 Measurement ID — same single-line-to-edit
-pattern as `BRAND_ACCENT` in `theme.ts`. No Render env var needed; the ID isn't a
-secret (it's visible in the shipped JS either way).
+`GA_MEASUREMENT_ID` in `src/lib/analytics.ts` is set to the real GA4 property
+(`G-NEXQ3KXMY3`). No Render env var needed; the ID isn't a secret (it's visible
+in the shipped JS either way).

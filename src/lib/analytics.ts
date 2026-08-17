@@ -5,10 +5,8 @@
  * Render serves) running on a real host. `npm run dev` and a local
  * `npm run preview` never load the GA script or send any event — no request
  * to Google happens while debugging on localhost.
- *
- * >>> PLACEHOLDER — swap in the real GA4 Measurement ID before deploying. <<<
  */
-const GA_MEASUREMENT_ID = 'G-XXXXXXXXXX';
+const GA_MEASUREMENT_ID = 'G-NEXQ3KXMY3';
 
 declare global {
   interface Window {
