@@ -21,7 +21,7 @@ export function AppBarHeader() {
             Pulse
           </Typography>
           <Typography sx={{ fontFamily: brandTokens.displayFontFamily, fontWeight: 600, fontSize: '0.95rem' }}>
-            First-Market Thesis
+            First-Market Dashboard
           </Typography>
         </Box>
         <Box sx={{ flexGrow: 1 }} />
