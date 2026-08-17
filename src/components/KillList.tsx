@@ -1,15 +1,23 @@
 import { Card, CardContent, Box, Typography, Stack } from '@mui/material';
 import BlockIcon from '@mui/icons-material/Block';
 import { SEGMENTS } from '../model/thesis';
+import type { RankedSegment } from '../model/scoring';
 import { brandTokens } from '../theme/theme';
 import { trackEvent } from '../lib/analytics';
+
+interface Props {
+  selected: RankedSegment;
+  onSelect: (id: string) => void;
+}
 
 /**
  * KillList — what Pulse is NOT, and exactly why. Naming this unprompted is the
  * Kill Discipline competency made visible. The 1:1s entry is the headline: the
- * biggest market is the trap.
+ * biggest market is the trap. Only shown while a killed segment is selected.
  */
-export function KillList({ onSelect }: { onSelect: (id: string) => void }) {
+export function KillList({ selected, onSelect }: Props) {
+  if (selected.segment.verdict !== 'kill') return null;
+
   const kills = SEGMENTS.filter((s) => s.verdict === 'kill');
 
   // Pull the single most-diagnostic reason (lowest score) for each kill.

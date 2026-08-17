@@ -54,20 +54,24 @@ export default function App() {
           {/* Center: the result */}
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2.5, minWidth: 0 }}>
             <RankingView ranked={ranked} selectedId={selectedId} onSelect={setSelectedId} />
-            <ScoreMatrix
-              ranked={ranked}
-              weights={weights}
-              selectedId={selectedId}
-              onSelect={setSelectedId}
-            />
           </Box>
 
           {/* Right: the defense */}
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2.5 }}>
             {selected && <WhatWouldHaveToBeTrue selected={selected} />}
             {selected && <UpsellTargets selected={selected} />}
-            <KillList onSelect={setSelectedId} />
+            {selected && <KillList selected={selected} onSelect={setSelectedId} />}
           </Box>
+        </Box>
+
+        {/* Full-width: the detail, once the headline result is set. */}
+        <Box sx={{ mt: 2.5 }}>
+          <ScoreMatrix
+            ranked={ranked}
+            weights={weights}
+            selectedId={selectedId}
+            onSelect={setSelectedId}
+          />
         </Box>
 
         {/* Footer — the unofficial-concept disclaimer. */}

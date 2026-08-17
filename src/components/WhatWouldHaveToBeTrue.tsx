@@ -16,7 +16,6 @@ const modeLabel: Record<string, string> = {
 
 export function WhatWouldHaveToBeTrue({ selected }: Props) {
   const { segment } = selected;
-  const hasDetail = segment.whatWouldHaveToBeTrue?.length || segment.roi;
 
   return (
     <Card sx={{ height: '100%' }}>
@@ -25,7 +24,9 @@ export function WhatWouldHaveToBeTrue({ selected }: Props) {
           What would have to be true
         </Typography>
 
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mt: 1, mb: 0.5, flexWrap: 'wrap' }}>
+        <Box
+          sx={{ display: 'flex', alignItems: 'center', gap: 1, mt: 1, mb: 0.5, flexWrap: 'wrap' }}
+        >
           <Typography variant="h5" component="h2">
             {segment.name}
           </Typography>
@@ -36,7 +37,7 @@ export function WhatWouldHaveToBeTrue({ selected }: Props) {
             sx={{ borderColor: brandTokens.divider, color: 'text.secondary', fontSize: '0.7rem' }}
           />
         </Box>
-        <Typography variant="body2" sx={{ color: 'text.secondary', mb: 2 }}>
+        <Typography variant="body2" sx={{ color: 'text.secondary', mb: 2, whiteSpace: 'pre-line' }}>
           {segment.tagline}
         </Typography>
 
@@ -68,7 +69,9 @@ export function WhatWouldHaveToBeTrue({ selected }: Props) {
             <Stack spacing={1.25}>
               {segment.whatWouldHaveToBeTrue.map((item, i) => (
                 <Box key={i} sx={{ display: 'flex', gap: 1.25, alignItems: 'flex-start' }}>
-                  <CheckCircleOutlineIcon sx={{ fontSize: 18, color: brandTokens.BRAND_ACCENT, mt: '2px', flexShrink: 0 }} />
+                  <CheckCircleOutlineIcon
+                    sx={{ fontSize: 18, color: brandTokens.BRAND_ACCENT, mt: '2px', flexShrink: 0 }}
+                  />
                   <Typography variant="body2" sx={{ lineHeight: 1.55 }}>
                     {item}
                   </Typography>
@@ -76,13 +79,6 @@ export function WhatWouldHaveToBeTrue({ selected }: Props) {
               ))}
             </Stack>
           </>
-        )}
-
-        {!hasDetail && (
-          <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-            This segment is a candidate, not a bet. Select the winner or runner-up to see
-            the ROI skeleton and the assumptions that would have to hold.
-          </Typography>
         )}
       </CardContent>
     </Card>

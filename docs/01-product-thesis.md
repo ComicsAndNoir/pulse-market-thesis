@@ -6,7 +6,7 @@
 customer lists already exist, the buyer owns a revenue number, and the interview is a fit
 for what ships today.
 
-The dashboard exists to *defend that sentence* under pressure — not to present a neutral
+The dashboard exists to _defend that sentence_ under pressure — not to present a neutral
 framework. Lead with the bet; use the tool to withstand challenge.
 
 ## Why a scoring board at all
@@ -14,7 +14,7 @@ framework. Lead with the bet; use the tool to withstand challenge.
 The role's real test is reasoning to a defensible bet under total uncertainty, naming
 which variables the bet is sensitive to, and committing. The board makes that reasoning
 visible. The composite score is a **conversation-starter, not an answer** — defend the
-*structure and the weights*, never the exact numbers.
+_structure and the weights_, never the exact numbers.
 
 ## The rubric (seven metrics)
 
@@ -23,15 +23,15 @@ prove value before the room loses patience. So proof-speed and ROI are weighted 
 and TAM/expansion is **deliberately underweighted** — that underweighting is the
 counterintuitive move that signals prior experience, and it should be said out loud.
 
-| Metric | Weight | Measures | Why weighted this way |
-| --- | --- | --- | --- |
-| Time to First Proof | 20% | Days from "go" to a pilot showing signal | 0–1 dies on slow proof; this is the day-90 test |
-| Willingness to Pay / ROI Clarity | 20% | Can you tie the conversation to a dollar the buyer already owns | No dollar → no budget → no pilot |
-| Buyer Reachability | 15% | Can you be in front of the buyer in week one | The "Buyer Proximity" competency, literally |
-| Pain Acuity | 15% | Painkiller vs. vitamin | Determines whether pilots convert to repeat use |
-| Capability Fit Today | 15% | Match to what Pulse is excellent at *now* (evidentiary/scripted vs. exploratory) | You win with the sharp edge you have, not the roadmap |
-| Competitive Whitespace | 10% | How crowded the incumbent field is | Thin field = faster wedge |
-| Expansion Path | 5% | Land-and-expand potential | Deliberately low — a tiebreaker, not a driver |
+| Metric                           | Weight | Measures                                                                         | Why weighted this way                                 |
+| -------------------------------- | ------ | -------------------------------------------------------------------------------- | ----------------------------------------------------- |
+| Time to First Proof              | 20%    | Days from "go" to a pilot showing signal                                         | 0–1 dies on slow proof; this is the day-90 test       |
+| Willingness to Pay / ROI Clarity | 20%    | Can you tie the conversation to a dollar the buyer already owns                  | No dollar → no budget → no pilot                      |
+| Buyer Reachability               | 15%    | Can you be in front of the buyer in week one                                     | The "Buyer Proximity" competency, literally           |
+| Severity of Pain Point           | 15%    | Painkiller vs. vitamin                                                           | Determines whether pilots convert to repeat use       |
+| Capability Fit Today             | 15%    | Match to what Pulse is excellent at _now_ (evidentiary/scripted vs. exploratory) | You win with the sharp edge you have, not the roadmap |
+| Competitive Whitespace           | 10%    | How crowded the incumbent field is                                               | Thin field = faster wedge                             |
+| Expansion Path                   | 5%     | Land-and-expand potential                                                        | Deliberately low — a tiebreaker, not a driver         |
 
 Composite = weighted sum of the 1–5 cell scores, weights normalized to 100%.
 
@@ -39,14 +39,14 @@ Composite = weighted sum of the 1–5 cell scores, weights normalized to 100%.
 
 Seeded scores produce this ranking. All scores are hypotheses to validate with buyers.
 
-| Rank | Segment | Verdict | Composite | One-line logic |
-| --- | --- | --- | --- | --- |
-| 1 | Exit / Churn Interviews | **Winner** | 4.45 | Fast proof (lists exist), ROI tied to revenue, buyer owns a number. Evidentiary-leaning fit for today. |
-| 2 | Research-Study Participants | Runner-up | 3.75 | Purest evidentiary fit (same script, record matters), but fuzzier ROI and a fragmented buyer. |
-| 3 | Evidentiary Compliance Interviews | Parked | 3.40 | Great capability fit and clear ROI, but legal gatekeeping kills speed-to-first-pilot. |
-| 4 | Multi-Site Field Check-ins | Parked | 3.30 | Real pain and whitespace, but slower proof and an indirect dollar. |
-| 5 | 30-Day New-Hire Check-ins | **Kill** | 2.65 | Slow proof (wait 60–90 days), slow HR budgets, crowded (Lattice, Culture Amp, Enboarder). |
-| 6 | Weekly Manager 1:1s | **Kill** | 2.45 | Massive TAM — and the trap: no single buyer, unpriceable ROI, surveillance perception. |
+| Rank | Segment                           | Verdict    | Composite | One-line logic                                                                                         |
+| ---- | --------------------------------- | ---------- | --------- | ------------------------------------------------------------------------------------------------------ |
+| 1    | Exit / Churn Interviews           | **Winner** | 4.45      | Fast proof (lists exist), ROI tied to revenue, buyer owns a number. Evidentiary-leaning fit for today. |
+| 2    | Research-Study Participants       | Runner-up  | 3.75      | Purest evidentiary fit (same script, record matters), but fuzzier ROI and a fragmented buyer.          |
+| 3    | Evidentiary Compliance Interviews | Parked     | 3.40      | Great capability fit and clear ROI, but legal gatekeeping kills speed-to-first-pilot.                  |
+| 4    | Multi-Site Field Check-ins        | Parked     | 3.30      | Real pain and whitespace, but slower proof and an indirect dollar.                                     |
+| 5    | 30-Day New-Hire Check-ins         | **Kill**   | 2.65      | Slow proof (wait 60–90 days), slow HR budgets, crowded (Lattice, Culture Amp, Enboarder).              |
+| 6    | Weekly Manager 1:1s               | **Kill**   | 2.45      | Massive TAM — and the trap: no single buyer, unpriceable ROI, surveillance perception.                 |
 
 > The exact 3rd/4th ordering (compliance vs. field) is close and is decided by the
 > composite, not hand-set — which is a feature: it shows the tool genuinely computing.

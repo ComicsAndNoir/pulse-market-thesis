@@ -103,7 +103,7 @@ export const DIMENSIONS: Dimension[] = [
   },
   {
     id: 'pain',
-    label: 'Pain Acuity',
+    label: 'Severity of Pain Point',
     weight: 15,
     description: 'Painkiller vs. vitamin. Determines whether pilots convert into repeat usage.',
   },
@@ -177,9 +177,8 @@ export const SEGMENTS: Segment[] = [
       },
     },
     whatWouldHaveToBeTrue: [
-      'The buyer is a Head of Retention / CX who is measured on a churn or NRR number.',
-      '~50 recently-churned customers can be sourced and interviewed inside two weeks.',
-      'The interview surfaces reasons a survey misses — enough to change one retention decision.',
+      '~50 recently-churned customers should be easy to source and interview inside two weeks.',
+      "Not replacing existing human-led interviews, but conducting those they simply don't have time or resources to hold.",
     ],
     roi: {
       buyer: 'Head of Retention / Customer Experience',
@@ -289,7 +288,8 @@ export const SEGMENTS: Segment[] = [
   {
     id: 'compliance',
     name: 'Evidentiary Compliance Interviews',
-    tagline: 'Ask every subject exactly the same thing, on the record.',
+    tagline:
+      'Ask every subject exactly the same thing, on the record.\n\nCompliance interviews implies they are already being held. In this instance, Pulse would be a cost saving, not expanding existing capabilities, which I see as our core strength.',
     mode: 'evidentiary',
     verdict: 'parked',
     scores: {
