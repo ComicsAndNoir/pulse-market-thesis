@@ -33,30 +33,41 @@ export function AboutDialog({ open, onClose }: Props) {
         }}
       >
         About this dashboard
-        <IconButton onClick={onClose} size="small" aria-label="Close" sx={{ color: 'text.secondary' }}>
+        <IconButton
+          onClick={onClose}
+          size="small"
+          aria-label="Close"
+          sx={{ color: 'text.secondary' }}
+        >
           <CloseIcon fontSize="small" />
         </IconButton>
       </DialogTitle>
       <DialogContent>
         <Stack spacing={2}>
           <Typography variant="body2" sx={{ lineHeight: 1.65 }}>
-            This dashboard was created from my first impressions about Pulse, and relies heavily
-            on publicly available data and assumptions. It&rsquo;s intended as a starting point
-            for my thinking around Pulse and the wider suite of Napster products, and something
-            that will grow as more data becomes available and stakeholder input is acquired.
+            The dashboard was created from my first impressions of Pulse, relying on publicly
+            available data and assumptions. It&rsquo;s intended as a starting point for my thinking
+            around Pulse and the wider suite of Napster products. This will grow as more data
+            becomes available and stakeholder input is acquired.
           </Typography>
           <Typography variant="body2" sx={{ lineHeight: 1.65 }}>
-            It was built from scratch in TypeScript using Claude Code and VS Code, and
-            automatically deployed to Render via GitHub. The branding matches Napster&rsquo;s
-            styles for ease of reading, and the UI implements Google&rsquo;s Material Design
-            system to make it familiar, accessible, and responsive across all device types.
+            It was built from scratch in TypeScript using Claude Code and VS Code, and automatically
+            deployed to Render via GitHub. The branding matches Napster&rsquo;s styles for ease of
+            reading, and the UI implements Google&rsquo;s Material Design system. I always include
+            the latter in the Claude Skills for engineering agents, as it ensures familiarity and
+            ease of use, and responsive design so it&rsquo;s accessible to stakeholders on both
+            mobile and desktop devices.
           </Typography>
 
           <Divider />
 
           <div>
             <Typography sx={{ fontWeight: 600 }}>Stuart Inskip</Typography>
-            <Link href="mailto:stuart.inskip@gmail.com" variant="body2" sx={{ color: 'text.secondary' }}>
+            <Link
+              href="mailto:stuart.inskip@gmail.com"
+              variant="body2"
+              sx={{ color: 'text.secondary' }}
+            >
               stuart.inskip@gmail.com
             </Link>
           </div>
