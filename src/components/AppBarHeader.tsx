@@ -1,8 +1,14 @@
-import { AppBar, Toolbar, Box, Typography, Chip, Divider } from '@mui/material';
+import { useState } from 'react';
+import { AppBar, Toolbar, Box, Typography, Chip, Divider, IconButton, Tooltip } from '@mui/material';
+import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import { NapsterWordmark } from './NapsterWordmark';
+import { AboutDialog } from './AboutDialog';
 import { brandTokens } from '../theme/theme';
+import { trackEvent } from '../lib/analytics';
 
 export function AppBarHeader() {
+  const [aboutOpen, setAboutOpen] = useState(false);
+
   return (
     <AppBar
       position="sticky"
@@ -36,7 +42,21 @@ export function AppBarHeader() {
             display: { xs: 'none', sm: 'flex' },
           }}
         />
+        <Tooltip title="About this dashboard" arrow>
+          <IconButton
+            size="small"
+            aria-label="About this dashboard"
+            onClick={() => {
+              setAboutOpen(true);
+              trackEvent('open_about');
+            }}
+            sx={{ color: 'text.secondary' }}
+          >
+            <InfoOutlinedIcon fontSize="small" />
+          </IconButton>
+        </Tooltip>
       </Toolbar>
+      <AboutDialog open={aboutOpen} onClose={() => setAboutOpen(false)} />
     </AppBar>
   );
 }

@@ -51,9 +51,11 @@ stands in for it). See the comment block at the top of `theme.ts` for the sourci
 
 ## Analytics
 
-GA4 (gtag.js) is loaded directly in `index.html`'s `<head>` — page views track on
-every load, including `npm run dev`. `src/lib/analytics.ts` adds interaction
-events on top of that (slider changes, resets, segment selection).
+GA4 (gtag.js) is loaded directly in `index.html`'s `<head>`, guarded by a plain
+hostname check — it never loads or fires on `localhost`/`127.0.0.1`, so nothing
+is sent while developing. `src/lib/analytics.ts` adds interaction events on top
+of that (slider changes, resets, segment selection); it's a no-op wherever the
+head script didn't run.
 
 ---
 
@@ -108,4 +110,4 @@ you've set a weighting and it reopens in exactly that state — handy for a foll
 
 Vite · React · TypeScript · MUI v6 (Material Design 3) · framer-motion · self-hosted Inter + Space Grotesk.
 No backend, no environment variables, no browser storage — fully static. GA4 is the
-one third-party script, and only on a production deploy (see Analytics above).
+one third-party script, and it's skipped entirely on localhost (see Analytics above).
