@@ -186,6 +186,11 @@ export const SEGMENTS: Segment[] = [
     },
     upsellTargets: [
       {
+        name: 'Napster AI Companion (Internal)',
+        rationale:
+          'Free-tier Companion users who used credits but never converted. Internal, so procurement and onboarding are near-instant, integration stays inside the Napster ecosystem, and the insight feeds a sibling product line with its own retention problem.',
+      },
+      {
         name: 'Sports Clubs & Event Operators',
         rationale:
           'Onboarding/offboarding interviews for every event staff member, plus potential follow-up with attendees.',
