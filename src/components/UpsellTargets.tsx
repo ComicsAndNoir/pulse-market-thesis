@@ -1,4 +1,4 @@
-import { Card, CardContent, Box, Typography, Stack, Tooltip } from '@mui/material';
+import { Card, CardContent, Box, Typography, Stack, Tooltip, Link } from '@mui/material';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import type { RankedSegment } from '../model/scoring';
 import { brandTokens } from '../theme/theme';
@@ -33,6 +33,39 @@ export function UpsellTargets({ selected }: Props) {
         <Typography variant="body2" sx={{ color: 'text.secondary', mb: 2 }}>
           Existing accounts to approach first.
         </Typography>
+
+        {segment.demoAccess && (
+          <Box
+            sx={{
+              p: 1.75,
+              borderRadius: 2,
+              backgroundColor: 'rgba(255,255,255,0.04)',
+              border: `1px solid ${brandTokens.divider}`,
+              mb: 2,
+            }}
+          >
+            <Typography variant="body2" sx={{ lineHeight: 1.6 }}>
+              Live demos of these conversations are available at{' '}
+              <Link
+                href={segment.demoAccess.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{ color: brandTokens.eyebrowAccent }}
+              >
+                {segment.demoAccess.url.replace(/^https?:\/\//, '')}
+              </Link>
+              . A password is required to prevent API limits from being exceeded. Request one
+              from{' '}
+              <Link
+                href={`mailto:${segment.demoAccess.contactEmail}`}
+                sx={{ color: brandTokens.eyebrowAccent }}
+              >
+                {segment.demoAccess.contactEmail}
+              </Link>
+              .
+            </Typography>
+          </Box>
+        )}
 
         <Stack spacing={1.5}>
           {segment.upsellTargets.map((t) => (

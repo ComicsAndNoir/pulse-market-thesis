@@ -45,6 +45,13 @@ export interface UpsellTarget {
   rationale: string;
 }
 
+export interface DemoAccess {
+  /** Where the live working demo(s) for this segment's upsell targets can be tried. */
+  url: string;
+  /** Who to contact for the access password (kept out of the demo to protect API limits). */
+  contactEmail: string;
+}
+
 export interface Segment {
   id: string;
   name: string;
@@ -62,6 +69,8 @@ export interface Segment {
   roi?: RoiSkeleton;
   /** Existing Napster accounts that could plausibly be upsold into this segment. */
   upsellTargets?: UpsellTarget[];
+  /** Where to try a live demo backing up this segment's upsell targets, if one exists. */
+  demoAccess?: DemoAccess;
 }
 
 export interface ThesisModel {
@@ -183,6 +192,10 @@ export const SEGMENTS: Segment[] = [
     roi: {
       buyer: 'Head of Retention / Customer Experience',
       math: 'A 1-point retention lift on a $50M book is ~$500K/yr. A pilot that informs even one save motion pays for itself many times over.',
+    },
+    demoAccess: {
+      url: 'https://pulse-demo-5mpr.onrender.com',
+      contactEmail: 'stuart.inskip@gmail.com',
     },
     upsellTargets: [
       {
